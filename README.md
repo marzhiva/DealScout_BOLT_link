@@ -1,6 +1,6 @@
 # DealScout_BOLT_link
 
-[![Open the page](https://dealscout-cre-underw-7dv3.bolt.host)]
+[![Open the page](https://bolt.new/static/open-in-bolt.svg)](https://dealscout-cre-underw-7dv3.bolt.host)
 
 ## Overview
 
