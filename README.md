@@ -1,6 +1,6 @@
 # DealScout_BOLT_link
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-uypbancw)
+[![Open the page](https://dealscout-cre-underw-7dv3.bolt.host)]
 
 ## Overview
 
@@ -92,11 +92,7 @@ Contributions are welcome! To contribute:
 
 ## License
 
-This project is open source and available under the MIT License. See the LICENSE file for details.
-
-## Support
-
-For support, issues, or feature requests, please open an issue on the [GitHub Issues](https://github.com/marzhiva/DealScout_BOLT_link/issues) page.
+This project is open source.
 
 ## Author
 
