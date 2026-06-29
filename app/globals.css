@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 25 47;
+    --foreground: 230 241 255;
+    --card: 17 34 64;
+    --card-foreground: 230 241 255;
+    --popover: 17 34 64;
+    --popover-foreground: 230 241 255;
+    --primary: 16 185 129;
+    --primary-foreground: 10 25 47;
+    --secondary: 17 34 64;
+    --secondary-foreground: 230 241 255;
+    --muted: 17 34 64;
+    --muted-foreground: 139 163 194;
+    --accent: 245 158 11;
+    --accent-foreground: 10 25 47;
+    --destructive: 239 68 68;
+    --destructive-foreground: 230 241 255;
+    --border: 30 58 95;
+    --input: 30 58 95;
+    --ring: 16 185 129;
+    --radius: 1rem;
+    --chart-1: 16 185 129;
+    --chart-2: 59 130 246;
+    --chart-3: 245 158 11;
+    --chart-4: 139 92 246;
+    --chart-5: 239 68 68;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    background-color: #0A192F;
+    background-image:
+      linear-gradient(rgba(30, 58, 95, 0.25) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 58, 95, 0.25) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: -1px -1px;
+    color: #E6F1FF;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Card panel */
+  .panel {
+    @apply rounded-2xl border bg-[#112240];
+    border-color: #1E3A5F;
+  }
+
+  /* Monospace numeric display */
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Shared input style */
+  .ds-input {
+    @apply flex h-10 w-full rounded-lg text-sm;
+    background: #0A192F;
+    border: 1px solid #1E3A5F;
+    color: #E6F1FF;
+    padding: 0 0.75rem;
+    outline: none;
+    transition: border-color 150ms;
+  }
+  .ds-input:focus {
+    border-color: #10B981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+  }
+  .ds-input::placeholder {
+    color: #4A6A8A;
+  }
+  /* Remove number input spin arrows */
+  .ds-input[type='number']::-webkit-outer-spin-button,
+  .ds-input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .ds-input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Slider overrides for dark theme */
+.ds-slider [data-orientation='horizontal'] {
+  height: 6px;
+}
+.ds-slider [role='slider'] {
+  background: #E6F1FF !important;
+  border-color: #10B981 !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
